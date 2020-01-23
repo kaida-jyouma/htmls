@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prog-Qu</title>
+    <style type="text/css" media="all">
+        html{
+            background-color: #ffe364;
+            color: #3d258e;
+        }
+        dl{
+            margin: 8px;
+        }
+        .dl-parent{
+            margin: auto;
+        }
+        #dt-title{
+            font-size: 22.5px;
+            font-weight: 300;
+        }
+        dd{
+            margin-top: 0px;
+            margin-bottom: 15px;
+        }
+        body{
+            padding-left: 30px;
+        }
+        .qu{
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 30px;font-weight: 400;">プログラミング問題集(自作)</h1>
+    <p class="caution" style="font-size: 18px; font-weight: 300;margin-top: 10px;">
+        「以下の条件を満たすコードを書きなさい」:
+        <br>
+        回答に使用できる言語はPython, C#, C++, の3つとする。
+        <br>
+        ただし、使って良いライブラリはPythonのrandomライブラリのみとする。
+        <br>
+        C++のcmathはpow以外使用不可、C#のMathはrandomとfloorのみ使用可能とする。
+        <br>
+        なお、ステージ5の例外処理において、8進数や16進数の「0o261」や「0xdef3bd」は数字として扱うものとする。
+        <br>
+        また、ExステージではPython以外の言語を使用不可とし、ライブラリや、sorted、sort等のソート系の関数は使用してはならない。
+    </p>
+    <dl class="dl-parent">
+        <dt id="dt-title"><i><u>0. 四則演算/文字列操作/ループ処理/条件分岐</u></i></dt>
+        <dd>
+            <ol>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で入力された数までの総和を求めよ。</dd>
+                        <dd style="margin-top: 0px;">例: 5 => 15 / 20 => 210 / 24 => 300 / 10 => 55</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で入力された数の約数をすべて求め、半角スペース区切りで出力せよ。</dd>
+                        <dd style="margin-top: 4px;">例: 12 => 1 2 3 4 6 12 / 17 => 1 17 / 16 => 1 2 4 8 16</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で入力された半角スペース区切りの数列の総和を求めよ。</dd>
+                        <dd style="margin-top: 4px;">例: 1 2 3 4 5 => 15 / 5 3 16 8 27 10 => 69</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で入力された文字列をダブルクォーテーション(")で囲んで出力せよ。</dd>
+                        <dd style="margin-top: 4px;">例: python => "python" / roop => "roop"</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で入力された文字列を一文字ずつ改行区切りで出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で入力された文字列を、1文字おきに取り出し、結合して出力せよ。</dd>
+                        <dd style="margin-top: 4px;">例: question => qeto / I can write html and python => Icnwiehm pto</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で以下のデータが渡される。2行目以降の各数に1行目の数を掛けて、結果を改行区切りで出力せよ。なお、行数は(1行目の数 + 1)行となる。</dd>
+                        <dd style="margin-top: 4px;">データ => 1行目:数字(0以上) / 2行目以降:数字(10以上)</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で入力された文字列の長さ(文字の個数)が3の倍数ならば"y3"を、3の倍数ではなく、かつ2の倍数ならば"y2"、それ以外は"No"を出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で渡された数が素数であるかを判定し、素数であればその数を、素数でなければ2以上の最小の約数を出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">2行の標準入力で1以上の自然数が2つ渡された時、その2数の最小公倍数を求め、出力せよ。</dd>
+                    </dl>
+                </li>
+                <!--<li>-->
+                <!--    <dl>-->
+                <!--        <dt>Question :</dt>-->
+                <!--        <dd class="qu"></dd>-->
+                <!--    </dl>-->
+                <!--</li>-->
+            </ol>
+        </dd>
+        <dt id="dt-title"><i><u>1. 乱数</u></i></dt>
+        <dd>
+            <ol>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">プログラム内で1から10の間の整数である乱数を10個生成し、生成したすべて乱数の総和を求めよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">乱数と条件分岐を用いてサイコロを作成せよ。ただし、出る目の確率は[1, 2, 3, 4, 5, 6]=>[35%, 10%, 20%, 18%, 5%, 12%]とすること。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">乱数を2つ生成し、積が素数+1であれば"p1"、素数-1であれば"m1"、両方当てはまれば"b"、それ以外は"n"と出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">1から3までの乱数を100個生成し、それぞれの数の出現確率(%)を調べ、結果を半角スペース区切りで出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">2以上の乱数を2つ生成し、その乱数を両方とも出力した後、その和と積を足したものを出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">1以上5以下の整数である乱数を3つ生成し、その3数がすべて等しければ"Good"を、3つのうち2つが等しければ"OK"を、それ以外は"No"を出力せよ。</dd>
+                    </dl>
+                </li>
+                <!--<li>-->
+                <!--    <dl>-->
+                <!--        <dt>Question :</dt>-->
+                <!--        <dd></dd>-->
+                <!--    </dl>-->
+                <!--</li>-->
+            </ol>
+        </dd>
+        <dt id="dt-title"><i><u>2. 配列/配列操作/文字列操作の応用/ループの応用</u></i></dt>
+        <dd>
+            <ol>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で入力された文字列を一文字ずつリストに格納し、そのリストを出力せよ。</dd>
+                        <dd style="margin-top: 4px;">例: python => ["p", "y", "t", "h", "o", "n"] / LisT => ["L", "i", "s", "T"]</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で数が一つ渡された時、1からその数までの整数のリストを出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">数列に100個の0以上100未満の整数である乱数が入っている時、最大値を求め、そのインデックスを出力せよ。複数あればすべて出力すること。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">数列に100個の0以上100未満の整数である乱数が入っている時、出てきた回数が最も多いものを調べ、その数を出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">2以上の自然数である乱数を2つ生成した時、その2数の最大公約数を求めよ。</dd>
+                    </dl>
+                </li>
+                <!--<li>-->
+                <!--    <dl>-->
+                <!--        <dt>Question :</dt>-->
+                <!--        <dd></dd>-->
+                <!--    </dl>-->
+                <!--</li>-->
+            </ol>
+        </dd>
+        <dt id="dt-title"><i><u>3. 多次元配列</u></i></dt>
+        <dd>
+            <ol>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">1行目に行数nと列数m、2行目以降にm個の半角スペース区切りの数字の列がn行渡されるので、各列の同じインデックスの数字の和をそれぞれ半角スペース区切りで出力せよ。</dd>
+                    </dl>
+                </li>
+            </ol>
+        </dd>
+        <dt id="dt-title"><i><u>4. 連想配列</u></i></dt>
+        <dd>
+            <ol>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">10行の標準入力で10個のkeyとvalueが半角スペース区切りで与えられる。その後、標準入力でkeyの値が与えられるので、そのvalueの値を出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question&#32;:</dt>
+                        <dd class="qu">5行の標準入力で5個のkeyとvalue(=>全て数値)が渡される。その後、標準入力でkeyの値が半角スペース区切りで渡される(個数&#60;5)ので、上位k人のvalueの平均を出力せよ。</dd>
+                    </dl>
+                </li>
+            </ol>
+        </dd>
+        <dt id="dt-title"><i><u>5. 例外処理と応用</u></i></dt>
+        <dd>
+            <ol>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力でn行のデータが与えられるとき、nを出力せよ。(nは未知数であるものとする)</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で10行のデータが与えられ、それらは文字列と数に分類できる。この時、文字列の個数と数の個数をそれぞれ出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で次々とデータが与えられ、入力データが空であった場合はデータをすべて半角スペース区切りで出力せよ。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">標準入力で半角スペース区切りで入力されたデータをリストにしたい。この時、入力が数字ならば数字、文字列ならば文字列としたリストを出力せよ。</dd>
+                        <dd style="margin-top: 4px;">例:&#32;2 ruby 123 python flask 0x234 django 404 pandas => [2, "ruby", 123, "python", "flask", 0x234, "django", 404, "pandas"]</dd>
+                    </dl>
+                </li>
+            </ol>
+        </dd>
+        <dt id="dt-title"><i><u>Ex. ソートアルゴリズム in Python</u></i></dt>
+        <dd>
+            <ol>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">バブルソートを実装せよ。関数として実装し、改行区切りで過程も表示すること。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">シェーカーソートを実装せよ。関数として実装し、改行区切りで過程も表示すること。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">ボゴソートを実装せよ。関数として実装し、改行区切りで過程も表示すること。この問題のみ、random.sampleの使用を許可する。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">選択ソートを実装せよ。関数として実装し、改行区切りで過程も表示すること。</dd>
+                        <!--dd style="margin-top: 4px;">例:&#32;2 ruby 123 python flask 0x234 django 404 pandas => [2, "ruby", 123, "python", "flask", 0x234, "django", 404, "pandas"]</dd-->
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Question :</dt>
+                        <dd class="qu">マージソートを実装せよ。関数として実装し、改行区切りで過程も表示すること。</dd>
+                        <!--dd style="margin-top: 4px;">例:&#32;2 ruby 123 python flask 0x234 django 404 pandas => [2, "ruby", 123, "python", "flask", 0x234, "django", 404, "pandas"]</dd-->
+                    </dl>
+                </li>
+            </ol>
+        </dd>
+    </dl>
+</body>
+</html>
