@@ -63,7 +63,7 @@ function innerhtml(idname, text){
 function writeans(list_name) {
     checker = 2;
     l = list_name;
-    setTimeout(function () {document.getElementById('gamewin').innerHTML = "<h1 class='result1'>answer?</h1>" + '<style type="text/css">.diver{text-align: center;}.btnans{text-align: center;border-color: #000000;border-width: 1px;}.pans01{/*border-color: #000000;border-width: 1px;*/border-style: none;width: 75px;}</style><div class="diver"><input class="pans01" type="text" id="pans" autofocus="autofocus" placeholder="answer :">' + "<input class='btnans' type='button' value='check' onclick='lcheck(l)'></div>"}, 2000);
+    setTimeout(function () {document.getElementById('gamewin').innerHTML = "<h1 class='result1'>answer?</h1>" + '<style type="text/css">.diver{text-align: center;}.btnans{text-align: center;border-color: #000000;border-width: 1px;}.pans01{/*border-color: #000000;border-width: 1px;*/border-style: none;width: 200px;height: 40px;font-size: 25px;}.pans01:focus{outline: none;background-color: #9fc3fd;}</style><div class="diver"><input class="pans01" type="text" id="pans" autofocus="autofocus" placeholder="answer :"><br>' + "<input style='height: 20px;width: 90px;' class='btnans' type='button' value='check' onclick='lcheck(l)'></div>"}, 2000);
 }
 function show(list_name) {
     var ct002 = 0;
