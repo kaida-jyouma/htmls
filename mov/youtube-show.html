@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" onclick="key()" onload="load()">
+<head>
+    <meta charset="UTF-8">
+    <title>Watcher</title>
+    <script type="text/javascript" charset="utf-8">
+        function key(){
+            switch (event.keyCode) {
+                case 13:
+                    setTimeout(function() {show()}, 200);
+                    break;
+                    
+                default:
+                    // code
+            }
+        }
+        function show(){
+            var link = document.getElementById('url').value;
+            var ll = link.split('/');
+            if (link === 'before'){
+                document.getElementById('url').value = localStorage.getItem('#linq-set');
+            }else if (ll[0] !== 'https:'){
+                document.getElementById('ercd').innerHTML = 'Please input "URL"...';
+                document.getElementById('url').value = '';
+                setTimeout(function() {document.getElementById('ercd').innerHTML='None'}, 1000);
+            }else{
+                document.getElementById('ercd').innerHTML = 'Please wait...';
+                document.getElementById('flame').innerHTML = '<iframe id="if1" width="806" height="453" src="https://www.youtube.com/embed/' + ll[3].split('=')[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                setTimeout(function() {document.getElementById('ercd').innerHTML='None'}, 1000);
+                localStorage.setItem('#linq-set', link);
+            }
+        }
+        function load(){
+            setTimeout(function (){
+                if (localStorage.getItem('#linq-set') !== null){
+                    document.getElementById('url').value = localStorage.getItem('#linq-set');
+                    document.getElementById('check').click();
+                }
+            }, 10);
+            console.log('load');
+        }
+    </script>
+    <link rel="stylesheet" href="youtube-show-small.css" media="screen and (max-width:480px)">
+    <link rel="stylesheet" href="youtube-show-medium.css" media="screen and (min-width:480px) and (max-width:1024px)">
+    <link rel="stylesheet" href="youtube-show-large.css" media="screen and (min-width:1024px)">
+</head>
+<body>
+    <h1 id='title'>Youtube-Watcher</h1>
+    <div class="linq">
+        <input type="url" name="url" id="url" placeholder="_____input_URL_____">
+        <input type="button" name="check" id="check" value="show" onclick="show()">
+    </div>
+    <div id="errorwin">
+        <p id='eror'>Status:&#32;<span id='ercd'>None</span></p>
+    </div>
+    <div id="flame">
+        <iframe id=if1 width="806" height="453" src="https://bing.com/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
+<!--<iframe width="806" height="453" src="https://www.youtube.com/embed/x_EDF97RRao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--<iframe width="806" height="453" src="https://www.youtube.com/embed/0SMBPhmQccs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--https://www.youtube.com/watch?v=x_EDF97RRao-->
+<!--https://www.youtube.com/watch?v=0SMBPhmQccs-->
+<!--https://www.youtube.com/watch?v=0SMBPhmQccs-->

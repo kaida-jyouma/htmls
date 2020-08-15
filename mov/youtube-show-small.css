@@ -1,0 +1,29 @@
+html {
+    background-color: #79FFC0;
+    text-align: center;
+}
+#title{
+    font-size: 28px;
+    font-family: Arial;
+    font-weight: 300;
+}
+#url{
+    background-color: inherit;
+    border-style: none;
+    width: 300px;
+    height: 20px;
+}
+#url:focus{
+    outline: none;
+    background-color: #95ff00;
+    /*outline-color: #000000;*/
+    /*outline-width: 0.5px;*/
+    /*outline-style: solid;*/
+}
+iframe{
+    width: 403px;
+    height: 226.5px;
+}
+#check{
+    width:60px;
+}
