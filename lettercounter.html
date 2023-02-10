@@ -162,7 +162,7 @@
             resize: none;
             width: 600px;
             height: 55%;
-            min-height: 350px;
+            min-height: 325px;
             font-size: 14px;
             font-weight: 200;
             background-color: inherit;
@@ -238,11 +238,12 @@
 <body onkeydown="countdis()" onload="start()">
     <h1 id="title">Letter Counter</h1>
     <div id="txar">
-        <textarea id="tx-paste" onkeyup="countdis()"></textarea>
+        <textarea class="txp" id="tx-paste" onkeyup="countdis()"></textarea>
+        <textarea class="txp" id="tx-paste" onkeyup="countdis()" hidden="hidden"></textarea>
     </div>
     <p id="win-dis" style='font-size: 18px;text-align: center;'></p>
     <!--<div id="div-cpbtn">-->
-        <p id="cpbtn" onclick="copy()">Copy-text</p>
+        <p id="cpbtn" onclick="change()">switch editor</p>
     <!--</div>-->
     <hr color="#000000" size="2" width="100%" noshade>
     <h5 class="h5-subtitle" onclick="maxlen()">Now Time:</h5>
